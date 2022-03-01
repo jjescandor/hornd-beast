@@ -30,7 +30,7 @@ class Main extends React.Component {
 
         return (
             <>
-                {hornedBeastArr.map(Horn => <Beast title={Horn.title} imgUrl={Horn.image_url} description={Horn.description} />)}
+                {hornedBeastArr.map(horn => <Beast title={horn.title} imgUrl={horn.image_url} description={horn.description} />)}
             </>
         )
     }
