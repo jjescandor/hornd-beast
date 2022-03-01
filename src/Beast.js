@@ -5,8 +5,8 @@ class Beast extends React.Component {
         return (
             <>
                 <h1>{this.props.title}</h1>
-                <img src={this.props.imgUrl} alt=""></img>
-                <h3>{this.props.description}</h3>
+                <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title}></img>
+                <p>{this.props.description}</p>
             </>
         )
     }
