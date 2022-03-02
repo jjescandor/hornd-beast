@@ -6,11 +6,11 @@ import Footer from './Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#F0F8FF", marginTop: '-20px' }}>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </div >
   );
 }
 
