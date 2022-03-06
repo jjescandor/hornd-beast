@@ -32,7 +32,6 @@ class Footer extends React.Component {
         return (
             <>
                 <h3>Created by: JJ Escandor</h3>
-                <Button onClick={this.getDadJoke} style={{ margin: '50px' }}>Click for Dad Jokes</Button>
             </>
         )
     }
