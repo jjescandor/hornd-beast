@@ -1,0 +1,14 @@
+form{
+    display: flex;
+    justify-content: center;
+    margin:1em;
+}
+
+input,
+Button{
+margin:10px
+}
+
+.FormDiv{
+    background-color: #ADD8E6;
+}

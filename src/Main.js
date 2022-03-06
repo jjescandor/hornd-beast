@@ -1,14 +1,15 @@
 import React from 'react';
 import Beast from './Beast.js';
-import BeastsArr from './data.json';
-
-
+import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
+
     render() {
         return (
             <>
-                {BeastsArr.map(beast => <Beast title={beast.title} imgUrl={beast.image_url} description={beast.description} />)}
+                <Row md={5}>
+                    {this.props.beastArr.map((beast, idx) => <Beast key={idx + beast.title} title={beast.title} imgUrl={beast.image_url} description={beast.description} showModal={this.props.showModal} />)}
+                </Row>
             </>
         )
     }
