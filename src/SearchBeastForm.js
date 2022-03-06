@@ -17,6 +17,7 @@ class SearchBeastForm extends React.Component {
         this.setState({
             search: evt.target.value
         });
+        this.props.search(this.state.search)
 
     }
 
