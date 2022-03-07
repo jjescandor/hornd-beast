@@ -1,5 +1,28 @@
 .BeastCard{
     background-color: #ADD8E6;
-    margin:5px;
+    margin:20px;
+    height: 95%;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
 
+.beastImg{
+    -webkit-box-shadow: 0 10px 6px -6px rgb(93, 123, 93);
+    box-shadow: 0 10px 6px -6px rgb(93, 123, 93);
+    border-radius: 8%;
+        cursor:pointer
+
+}
+
+.button{
+    background-color: #778898;
+    border: none;
+    transition-duration: 350ms;
+
+
+}
+
+.button:hover{
+    transform: scale(1.05);
+    transition-duration: 350ms;
 }

@@ -59,9 +59,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App" style={{ backgroundColor: "#F0F8FF", marginTop: '-20px' }}>
+      <div className="App" style={{ backgroundColor: "#B0C4DE", marginTop: '-20px' }}>
         <Header />
-        <SearchBeastForm search={this.searchBeast} style={{ backgroundColor: "#F0F8FF" }} />
+        <SearchBeastForm search={this.searchBeast} />
         <SelectedBeast handleClose={this.onHide} show={this.state.show} name={this.state.beastName} description={this.state.beastDescription} url={this.state.beastImgUrl} />
         <Main showModal={this.showModal} beastArr={this.state.beastData} />
         <Footer />

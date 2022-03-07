@@ -34,8 +34,8 @@ class Header extends React.Component {
     render() {
         return (
             <>
-                <h1 style={{ padding: '50px' }}>Horned Beast</h1>
-                <Button onClick={this.getDadJoke} style={{ margin: '10px', width: '10rem' }}>Click for Dad Jokes</Button>
+                <h1 style={{ paddingTop: '50px', color: 'white', fontSize: '4rem', webkitTextStroke: '2px #778899' }}>Horned Beast</h1>
+                <Button onClick={this.getDadJoke} style={{ margin: '15px', width: '10rem', backgroundColor: '#F08080', border: 'none' }}>Click for Dad Jokes</Button>
             </>
         )
     }
