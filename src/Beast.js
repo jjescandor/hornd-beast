@@ -34,14 +34,14 @@ class Beast extends React.Component {
         return (
             <Col><Card className='BeastCard' style={{ fontWeight: 'bold', padding: '30px' }} >
                 <Card.Title>{this.state.title}</Card.Title>
-                <Card.Img onClick={this.likes} src={this.state.imgUrl} alt={this.state.title} />
+                <Card.Img className='beastImg' onClick={this.likes} src={this.state.imgUrl} alt={this.state.title} />
                 <Card.Body>
                     <Card.Text style={{ color: 'red' }}> {this.state.likes ? `♥️ ${this.state.likes} ♥️ ` : "Please ♥️  me"} </Card.Text>
                     <Card.Text>
                         {this.state.description}
                     </Card.Text>
-                    <Button onClick={this.resetLikes}>Reset ♥️</Button>
-                    <Button onClick={this.showDetails}>Details</Button>
+                    <Button className='button' onClick={this.resetLikes}>Reset ♥️</Button>
+                    <Button className='button' onClick={this.showDetails}>Details</Button>
                 </Card.Body>
             </ Card>
             </Col>
