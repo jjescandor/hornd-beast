@@ -41,7 +41,8 @@ class App extends React.Component {
     });
   }
   searchBeast = (searchKeyword) => {
-    let searchedData = this.newData(searchKeyword)
+    let keyWord = searchKeyword.toLowerCase()
+    let searchedData = this.newData(keyWord)
     this.setState({
       beastData: searchedData
     })
@@ -49,8 +50,9 @@ class App extends React.Component {
 
   newData = (keyWord) => {
     return BeastsArr.filter(value => {
-      let regex = new RegExp(keyWord, 'i')
-      return value.title.match(regex) || value.description.match(regex);
+      let lowerTitle = value.title.toLowerCase()
+      let lowerDescrip = value.description.toLowerCase()
+      return lowerTitle.match(keyWord) || lowerDescrip.match(keyWord);
     })
   }
 
