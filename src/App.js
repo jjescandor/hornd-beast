@@ -41,19 +41,16 @@ class App extends React.Component {
     });
   }
   searchBeast = (searchKeyword) => {
-    let lower = searchKeyword.toLowerCase()
-    let searchedData = this.newData(lower)
+    let searchedData = this.newData(searchKeyword)
     this.setState({
       beastData: searchedData
     })
-    console.log(searchedData);
   }
 
   newData = (keyWord) => {
     return BeastsArr.filter(value => {
-      let lowerCaseValueTitle = value.title.toLowerCase();
-      let lowerCaseValueDescription = value.description.toLowerCase();
-      return lowerCaseValueTitle.includes(keyWord) || lowerCaseValueDescription.includes(keyWord);
+      let regex = new RegExp(keyWord, 'i')
+      return value.title.match(regex) || value.description.match(regex);
     })
   }
 
