@@ -57,11 +57,8 @@ class App extends React.Component {
   }
 
   filterHorns = (numHorns) => {
-    if (numHorns === 'all') {
-      this.setState({ beastData: BeastsArr })
-    } else {
-      this.setState({ beastData: BeastsArr.filter(value => value.horns === parseInt(numHorns)) })
-    }
+    numHorns !== 'all' ? this.setState({ beastData: BeastsArr.filter(value => value.horns === parseInt(numHorns)) })
+      : this.setState({ beastData: BeastsArr })
   }
 
   render() {
