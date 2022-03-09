@@ -22,8 +22,6 @@ class App extends React.Component {
     this.searchBeast = this.searchBeast.bind(this);
     this.showModal = this.showModal.bind(this);
     this.onHide = this.onHide.bind(this);
-    this.newData = this.newData.bind(this);
-    this.filterHorns = this.filterHorns.bind(this);
   }
 
   showModal = (name, description, url) => {
@@ -40,24 +38,15 @@ class App extends React.Component {
       show: false
     });
   }
-  searchBeast = (searchKeyword) => {
-    let keyWord = searchKeyword.toLowerCase()
-    let searchedData = this.newData(keyWord)
+  searchBeast = (keyWord) => {
+    let re = new RegExp(keyWord, 'i')
     this.setState({
-      beastData: searchedData
-    })
-  }
-
-  newData = (keyWord) => {
-    return BeastsArr.filter(value => {
-      let lowerTitle = value.title.toLowerCase()
-      let lowerDescrip = value.description.toLowerCase()
-      return lowerTitle.match(keyWord) || lowerDescrip.match(keyWord);
+      beastData: BeastsArr.filter(beast => beast.title.match(re) || beast.description.match(re))
     })
   }
 
   filterHorns = (numHorns) => {
-    numHorns !== 'all' ? this.setState({ beastData: BeastsArr.filter(value => value.horns === parseInt(numHorns)) })
+    numHorns !== 'all' ? this.setState({ beastData: BeastsArr.filter(beast => beast.horns === parseInt(numHorns)) })
       : this.setState({ beastData: BeastsArr })
   }
 
