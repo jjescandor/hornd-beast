@@ -23,6 +23,7 @@ class App extends React.Component {
     this.showModal = this.showModal.bind(this);
     this.onHide = this.onHide.bind(this);
     this.newData = this.newData.bind(this);
+    this.filterHorns = this.filterHorns.bind(this);
   }
 
   showModal = (name, description, url) => {
@@ -30,8 +31,7 @@ class App extends React.Component {
       show: true,
       beastName: name,
       beastDescription: description,
-      beastImgUrl: url
-
+      beastImgUrl: url,
     });
     console.log(this.state.beastImgUrl);
   };
@@ -56,11 +56,19 @@ class App extends React.Component {
     })
   }
 
+  filterHorns = (numHorns) => {
+    if (numHorns === 'all') {
+      this.setState({ beastData: BeastsArr })
+    } else {
+      this.setState({ beastData: BeastsArr.filter(value => value.horns === parseInt(numHorns)) })
+    }
+  }
+
   render() {
     return (
       <div className="App" style={{ backgroundColor: "#B0C4DE", marginTop: '-20px' }}>
         <Header />
-        <SearchBeastForm search={this.searchBeast} />
+        <SearchBeastForm search={this.searchBeast} filterHorns={this.filterHorns} />
         <SelectedBeast handleClose={this.onHide} show={this.state.show} name={this.state.beastName} description={this.state.beastDescription} url={this.state.beastImgUrl} />
         <Main showModal={this.showModal} beastArr={this.state.beastData} />
         <Footer />

@@ -13,6 +13,7 @@ class Beast extends React.Component {
             title: this.props.title,
             imgUrl: this.props.imgUrl,
             description: this.props.description,
+            horns: this.props.horns,
             likes: 0
         }
     }
@@ -39,6 +40,9 @@ class Beast extends React.Component {
                     <Card.Text style={{ color: 'red' }}> {this.state.likes ? `♥️ ${this.state.likes} ♥️ ` : "Please ♥️  me"} </Card.Text>
                     <Card.Text>
                         {this.state.description}
+                    </Card.Text>
+                    <Card.Text>
+                        Horns: {this.state.horns}
                     </Card.Text>
                     <Button className='button' onClick={this.resetLikes}>Reset ♥️</Button>
                     <Button className='button' onClick={this.showDetails}>Details</Button>

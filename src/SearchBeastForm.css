@@ -19,11 +19,18 @@ input{
     background-color: #ADD8E6;
     position:sticky;
     top:0;
-    z-index: 10;
+    z-index: 9;
 }
 
 .FormDiv div.card{
     background-color: #778899;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
+
+.formSelect{
+    height:50px;
+    margin:10px;
+    width: 20%;
+}
+

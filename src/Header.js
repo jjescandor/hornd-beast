@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import './Header.css';
 
 class Header extends React.Component {
 
@@ -34,8 +35,8 @@ class Header extends React.Component {
     render() {
         return (
             <>
-                <h1 style={{ paddingTop: '50px', color: 'white', fontSize: '4rem', webkitTextStroke: '2px #778899' }}>Horned Beast</h1>
-                <Button onClick={this.getDadJoke} style={{ margin: '15px', width: '10rem', backgroundColor: '#F08080', border: 'none' }}>Click for Dad Jokes</Button>
+                <h1 style={{ paddingTop: '50px', color: 'white', fontSize: '4rem', WebkitTextStroke: '2px #778899' }}>Horned Beast</h1>
+                <Button className='joke' onClick={this.getDadJoke} style={{ margin: '15px', width: '10rem', backgroundColor: '#F08080', border: 'none' }}>Click for Dad Jokes</Button>
             </>
         )
     }

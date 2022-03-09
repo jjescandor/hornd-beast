@@ -8,7 +8,7 @@ class Main extends React.Component {
         return (
             <>
                 <Row xs={1} sm={2} md={4}>
-                    {this.props.beastArr.map((beast, idx) => <Beast className='BeastDiv' key={idx + beast.title} title={beast.title} imgUrl={beast.image_url} description={beast.description} showModal={this.props.showModal} />)}
+                    {this.props.beastArr.map((beast, idx) => <Beast className='BeastDiv' key={idx + beast.title} title={beast.title} imgUrl={beast.image_url} description={beast.description} horns={beast.horns} showModal={this.props.showModal} />)}
                 </Row>
             </>
         )
