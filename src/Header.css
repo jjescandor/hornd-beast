@@ -1,5 +1,11 @@
-.joke{
+.joke,
+.createBeast{
     position:sticky;
     top:5px;
     z-index: 10;
+    margin: 15px;
+    width: 10rem;
+    background-color: #F08080;
+    border: none;
+    height: 60px;
 }

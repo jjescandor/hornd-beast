@@ -4,6 +4,12 @@
     height: 95%;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
+    transition-duration: 0.5s;
+}
+
+.BeastCard:hover{
+    transform: scale(1.02);
+    transition-duration: 0.5s;
 }
 
 .beastImg{
