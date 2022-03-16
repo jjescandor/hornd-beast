@@ -8,7 +8,6 @@ class SearchBeastForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: '',
             joke: '',
             disabled: false
         }
@@ -18,24 +17,19 @@ class SearchBeastForm extends React.Component {
 
     handleChange = (evt) => {
         evt.preventDefault();
-        this.setState({
-            search: evt.target.value
-        });
-        this.props.search(this.state.search)
+        this.props.search(evt.target.value)
 
     }
 
     handleSubmit = (evt) => {
         evt.preventDefault();
-        this.props.search(evt.target.value)
+        this.props.search(evt.target.value.toLowerCase())
     }
 
     handleHornsChange = (evt) => {
         evt.preventDefault();
-        let input = evt.target.value;
-        console.log(input.length);
-        input.length === 1 ? this.setState({ disabled: true }) : this.setState({ disabled: false });
-        this.props.filterHorns(input);
+        evt.target.value !== 'all' ? this.setState({ disabled: true }) : this.setState({ disabled: false });
+        this.props.filterHorns(evt.target.value);
     }
 
     render() {
@@ -57,6 +51,7 @@ class SearchBeastForm extends React.Component {
                             <option value='1' >1</option>
                             <option value='2' >2</option>
                             <option value='3' >3</option>
+                            <option value='100' >100</option>
                         </Form.Select>
                     </Form>
                 </Card>
