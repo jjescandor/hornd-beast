@@ -31,12 +31,18 @@ class Header extends React.Component {
         alert(this.state.joke);
     }
 
+    buildBeast = () => {
+        this.props.showBuildModal();
+
+    }
+
 
     render() {
         return (
             <>
                 <h1 style={{ paddingTop: '50px', color: 'white', fontSize: '4rem', WebkitTextStroke: '2px #778899' }}>Horned Beast</h1>
-                <Button className='joke' onClick={this.getDadJoke} style={{ margin: '15px', width: '10rem', backgroundColor: '#F08080', border: 'none' }}>Click for Dad Jokes</Button>
+                <Button className='joke' onClick={this.getDadJoke} >Click for Dad Jokes</Button>
+                <Button className="createBeast" onClick={this.buildBeast}>Create A Beast</Button>
             </>
         )
     }

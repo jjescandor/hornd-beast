@@ -1,0 +1,12 @@
+.buildBeast{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.buildBeast input{
+    height:35px;
+    width: 300px;
+}

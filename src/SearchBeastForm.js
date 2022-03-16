@@ -30,6 +30,7 @@ class SearchBeastForm extends React.Component {
         evt.preventDefault();
         evt.target.value !== 'all' ? this.setState({ disabled: true }) : this.setState({ disabled: false });
         this.props.filterHorns(evt.target.value);
+
     }
 
     render() {
